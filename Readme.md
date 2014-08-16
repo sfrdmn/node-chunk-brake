@@ -22,7 +22,7 @@ var chunkBrake = require('chunk-brake')
 
 var brake = chunkBrake(500, {objectMode: true})
 
-someObjectStreamProducer.pipe(brake).pipe(someObjectStreamReader)
+brake.pipe(someObjectStreamReader)
 
 for (var i = 0; i < 500; i++)
   brake.write({id: i, msg: 'all the sun that shines B)'})

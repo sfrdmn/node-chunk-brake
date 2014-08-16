@@ -2,6 +2,8 @@
 
 [![build status](https://secure.travis-ci.org/sfrdmn/node-chunk-brake.png)](http://travis-ci.org/sfrdmn/node-chunk-brake)
 
+[![testling badge](https://ci.testling.com/sfrdmn/node-chunk-brake.png)](https://ci.testling.com/sfrdmn/node-chunk-brake)
+
 Uses back pressure to throttle a stream to run at a maximum speed of *X* times per second
 
 Like [brake](https://github.com/substack/node-brake), but it throttles *chunks* instead of *bytes*. This means it works well as an `objectMode` transform.

@@ -1,11 +1,8 @@
 {
   "name": "chunk-brake",
   "version": "0.0.1",
-  "description": "Limit the rate at which a chunk stream streams",
+  "description": "Throttle object / chunk streams using back pressure",
   "main": "index.js",
-  "directories": {
-    "example": "example"
-  },
   "scripts": {
     "test": "make test"
   },

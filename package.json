@@ -1,0 +1,34 @@
+{
+  "name": "chunk-brake",
+  "version": "0.0.1",
+  "description": "Limit the rate at which a chunk stream streams",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sfrdmn/node-chunk-brake"
+  },
+  "keywords": [
+    "stream",
+    "objectmode",
+    "throttle"
+  ],
+  "author": "Sean Fridman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfrdmn/node-chunk-brake/issues"
+  },
+  "homepage": "https://github.com/sfrdmn/node-chunk-brake",
+  "devDependencies": {
+    "tap-colorize": "^1.2.0",
+    "tape": "^2.14.0"
+  },
+  "dependencies": {
+    "inherits": "^2.0.1"
+  }
+}

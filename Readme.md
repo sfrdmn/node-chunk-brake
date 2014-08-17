@@ -30,7 +30,7 @@ for (var i = 0; i < 500; i++)
 
 ## Details
 
-Note that this currently doesn't do anything super special to help ensure precision, i.e. to ensure that yes, chunks are in fact coming in at *X* times a second with relative guarantee
+Note that this currently doesn't do anything super special to help ensure accuracy, i.e. to ensure that yes, chunks are in fact coming in at *X* times a second with relative guarantee. Tests check for accuracy within 1 ms FWIW
 
 ## License
 

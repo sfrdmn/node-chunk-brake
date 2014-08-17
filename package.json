@@ -1,6 +1,6 @@
 {
   "name": "chunk-brake",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Throttle object / chunk streams using back pressure",
   "main": "index.js",
   "scripts": {

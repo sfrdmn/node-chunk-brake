@@ -5,8 +5,8 @@ var rate = require('./lib/rate-collector.js')
 var chunkBrake = require('../index.js')
 
 var targetRate = 10
-// Give the rate test a 1 ms cushion
-var rateAlpha = 1
+// Give the rate test a cushion
+var rateAlpha = 2
 
 function rateOk(rate) {
   return rate > targetRate - rateAlpha && rate < targetRate + rateAlpha
@@ -23,7 +23,7 @@ test('10 chunks / sec', function(t) {
   var brake = chunkBrake(100)
   source.pipe(brake).pipe(rate(function(err, rate) {
     if (err) t.fail(err)
-    t.ok(rateOk(rate), 'rate about equal to 10')
+    t.ok(rateOk(rate), 'rate equal to 10 within ' + rateAlpha + ' ms')
     source.end()
   }))
 })
@@ -34,7 +34,7 @@ test('10 objects / sec', function(t) {
   var brake = chunkBrake(100, {objectMode: true})
   source.pipe(brake).pipe(rate(function(err, rate) {
     if (err) t.fail(err)
-    t.ok(rateOk(rate), 'rate about equal to 10')
+    t.ok(rateOk(rate), 'rate equal to 10 within ' + rateAlpha + ' ms')
     source.end()
   }, {objectMode: true}))
 })
